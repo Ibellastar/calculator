@@ -27,20 +27,20 @@ test_1 = executable('test_1',
 
 test('Test 1 - Addition', test_1)
 
-test1_2 = executable('test_subtraction',
+test_2 = executable('test_2',
   sources: [
     files([
       '../../src' / 'calculator.c',
-      'test' / 'test_subtraction.c',
+      'test' / 'test_2.c',
     ]),
-    unity_gen_runner.process('test' / 'test_subtraction.c')
+    unity_gen_runner.process('test' / 'test_2.c')
   ],
   include_directories: [ inc ],
   dependencies: [ unity_dependency ],
 )
 
 
-test('Subtraction', test1_2)
+test('Test 2 - Subtraction', test_2)
 
 test1_3 = executable('test_multiplication',
   sources: [
