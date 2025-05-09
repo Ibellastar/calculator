@@ -42,32 +42,32 @@ test_2 = executable('test_2',
 
 test('Test 2 - Subtraction', test_2)
 
-test1_3 = executable('test_multiplication',
+test_3 = executable('test_3',
   sources: [
     files([
       '../../src' / 'calculator.c',
-      'test' / 'test_multiplication.c',
+      'test' / 'test_3.c',
     ]),
-    unity_gen_runner.process('test' / 'test_multiplication.c')
+    unity_gen_runner.process('test' / 'test_3.c')
   ],
   include_directories: [ inc ],
   dependencies: [ unity_dependency ],
 )
 
 
-test('Multiplication', test1_3)
+test('Test 3 - Multiplication', test_3)
 
-test1_4 = executable('test_division',
+test_4 = executable('test_4',
   sources: [
     files([
       '../../src' / 'calculator.c',
-      'test' / 'test_division.c',
+      'test' / 'test_4.c',
     ]),
-    unity_gen_runner.process('test' / 'test_division.c')
+    unity_gen_runner.process('test' / 'test_4.c')
   ],
   include_directories: [ inc ],
   dependencies: [ unity_dependency ],
 )
 
 
-test('Division', test1_4)
+test('Test 4 - Division', test_4)
