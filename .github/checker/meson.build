@@ -12,20 +12,20 @@ unity_gen_runner = unity_subproject.get_variable('gen_test_runner')
 
 inc = include_directories('../../src')
 
-test1_1 = executable('test_addition',
+test_1 = executable('test_1',
   sources: [
     files([
       '../../src' / 'calculator.c',
-      'test' / 'test_addition.c',
+      'test' / 'test_1.c',
     ]),
-    unity_gen_runner.process('test' / 'test_addition.c')
+    unity_gen_runner.process('test' / 'test_1.c')
   ],
   include_directories: [ inc ],
   dependencies: [ unity_dependency ],
 )
 
 
-test('Addition', test1_1)
+test('Test 1 - Addition', test_1)
 
 test1_2 = executable('test_subtraction',
   sources: [
